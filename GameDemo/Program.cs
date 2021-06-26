@@ -17,8 +17,8 @@ namespace GameDemo
 
 
             Console.WriteLine("---------Gamer---------");
-            Gamer gamer1 = new Gamer { Id = 1, FirstName = "Jim", LastName = "Beglin", DateOfBirth = new(1984, 2, 6) };
-            GamerManager gamerManager = new GamerManager();
+            Gamer gamer1 = new Gamer { Id = 1, FirstName = "Jim", LastName = "Beglin",IdentityNumber=123};
+            GamerManager gamerManager = new GamerManager(new UserValidationManager());
             gamerManager.Add(gamer1);
             gamerManager.Update(gamer1);
             gamerManager.Delete(gamer1);
